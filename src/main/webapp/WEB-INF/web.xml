@@ -1,0 +1,25 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>ServletEnter</servlet-name>
+        <servlet-class>com.all.controllers.ServletEnter</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletEnter</servlet-name>
+        <url-pattern>/enter</url-pattern>
+    </servlet-mapping>
+<servlet>
+    <servlet-name>ServletAll</servlet-name>
+    <servlet-class>com.all.controllers.ServletAll</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAll</servlet-name>
+        <url-pattern>/all</url-pattern>
+    </servlet-mapping>
+</web-app>
