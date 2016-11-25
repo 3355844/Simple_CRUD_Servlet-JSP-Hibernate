@@ -2,7 +2,7 @@ package com.all.dao;
 
 import com.all.models.User;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by user on 21.11.2016.
@@ -12,5 +12,5 @@ public interface dao {
     User returnById(int id);
     void update(User user);
     void deleteUser(int id);
-    ArrayList<User> getAllUsers();
+    List getAllUsers();
 }
