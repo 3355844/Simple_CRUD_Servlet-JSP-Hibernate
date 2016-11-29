@@ -1,6 +1,7 @@
 package com.all.main;
 
 import com.all.dao.UserDao;
+import com.all.hibernate.HibernateUtil;
 import com.all.models.User;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.Date;
  */
 public class Test {
 //    public static void main(String[] args) {
-////
+//
 //        UserDao userDao = new UserDao();
 ////        User user = userDao.returnById(3);
 ////        System.out.println(user.toString());
@@ -24,7 +25,8 @@ public class Test {
 ////        user1.setUserName("updated user 2");
 //////        userDao.update(user1);
 //        System.out.println(user1);
-////        ArrayList<User> users = (ArrayList<User>) userDao.getAllUsers();
-////        System.out.println(users.toString());
+//        ArrayList<User> users = (ArrayList<User>) userDao.getAllUsers();
+//        System.out.println(users.toString());
+//        HibernateUtil.shutDown();
 //    }
 }

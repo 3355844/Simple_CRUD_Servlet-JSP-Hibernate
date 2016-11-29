@@ -14,12 +14,20 @@
         <servlet-name>ServletEnter</servlet-name>
         <url-pattern>/enter</url-pattern>
     </servlet-mapping>
-<servlet>
-    <servlet-name>ServletAll</servlet-name>
-    <servlet-class>com.all.controllers.ServletAll</servlet-class>
-</servlet>
+    <servlet>
+        <servlet-name>ServletAll</servlet-name>
+        <servlet-class>com.all.controllers.ServletAll</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletAll</servlet-name>
         <url-pattern>/all</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletUpdate</servlet-name>
+        <servlet-class>com.all.controllers.ServletUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdate</servlet-name>
+        <url-pattern>/update</url-pattern>
     </servlet-mapping>
 </web-app>

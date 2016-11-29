@@ -9,8 +9,12 @@ import java.util.List;
  */
 public interface dao {
     void addUserToDb(User user);
+
     User returnById(int id);
+
     void update(User user);
-    void deleteUser(int id);
-    List getAllUsers();
+
+    void deleteUser(User user);
+
+    List<User> getAllUsers();
 }
