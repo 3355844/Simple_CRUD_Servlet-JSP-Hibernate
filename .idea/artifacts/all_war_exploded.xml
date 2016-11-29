@@ -19,13 +19,14 @@
           <element id="library" level="project" name="Maven: org.antlr:antlr:3.2" />
           <element id="library" level="project" name="Maven: org.antlr:antlr-runtime:3.2" />
           <element id="library" level="project" name="Maven: org.antlr:stringtemplate:3.2" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.1" />
           <element id="library" level="project" name="Maven: org.apache.cassandra.deps:avro:1.4.0-cassandra-1" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.4.0" />
           <element id="library" level="project" name="Maven: org.mortbay.jetty:jetty:6.1.22" />
           <element id="library" level="project" name="Maven: org.mortbay.jetty:jetty-util:6.1.22" />
           <element id="library" level="project" name="Maven: org.mortbay.jetty:servlet-api:2.5-20081211" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.4.0" />
-          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.4.0" />
           <element id="library" level="project" name="Maven: jline:jline:0.9.94" />
           <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1" />
           <element id="library" level="project" name="Maven: com.github.stephenc.high-scale-lib:high-scale-lib:1.1.2" />
@@ -41,7 +42,6 @@
           <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.3.0.Final" />
           <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
-          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
           <element id="library" level="project" name="Maven: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1" />
           <element id="library" level="project" name="Maven: org.jboss:jandex:2.0.3.Final" />
           <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.3.0" />
