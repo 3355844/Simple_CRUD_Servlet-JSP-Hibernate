@@ -30,7 +30,7 @@
     </c:forEach>
 </table>
 <br><a href="/">To login page </a>
-<br><a href="update.jsp">To updating your feeds </a>
-<br><a href="delete.jsp">Delete you...</a>
+<br><a href="/update">To updating your feeds </a>
+<br><a href="/delete">Delete you...</a>
 </body>
 </html>

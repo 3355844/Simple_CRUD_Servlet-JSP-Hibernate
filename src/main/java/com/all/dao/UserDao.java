@@ -29,7 +29,7 @@ public class UserDao implements dao {
         Transaction transaction = session.beginTransaction();
         user = (User) session.get(User.class, idUser);
         transaction.commit();
-//        session.close();
+        session.close();
         return user;
     }
 

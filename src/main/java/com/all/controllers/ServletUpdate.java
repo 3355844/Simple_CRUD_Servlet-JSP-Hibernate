@@ -21,6 +21,8 @@ public class ServletUpdate extends HttpServlet {
         HttpSession session = request.getSession(true);
         UserDao userDao = new UserDao();
         User user = (User) session.getAttribute("user");
+
+        System.out.println(user.toString() + " do post void ");
         user.setUserName(request.getParameter("userName"));
         user.setCreatedBy(request.getParameter("createdBy"));
         user.setCreatedDate(new Date());
@@ -33,13 +35,9 @@ public class ServletUpdate extends HttpServlet {
         HttpSession session = request.getSession(true);
         UserDao userDao = new UserDao();
         User user = (User) session.getAttribute("user");
-        String createdByCheck = request.getParameter("createdByCheck");
-        if (user.getCreatedBy().equals(createdByCheck)) {
-            userDao.deleteUser(user);
-            session.invalidate();
-            request.getRequestDispatcher("/");
-        } else {
-            request.getRequestDispatcher("/all");
-        }
+        request.setAttribute("userName", user.getUserName());
+        request.setAttribute("createdBy", user.getCreatedBy());
+        System.out.println(user.toString()+ " do get void ");
+            request.getRequestDispatcher("update.jsp").forward(request, response);
     }
 }

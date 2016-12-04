@@ -1,57 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="hibernate.cfg.xml/Hibernate">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
-    <schema id="1" name="hibernate">
-      <visible>1</visible>
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="hibernate">
+      <Current>1</Current>
+      <Visible>1</Visible>
     </schema>
-    <schema id="2" name="blobsql"/>
-    <schema id="3" name="information_schema"/>
-    <schema id="4" name="mysql"/>
-    <schema id="5" name="peopledb"/>
-    <schema id="6" name="performance_schema"/>
-    <schema id="7" name="sakila"/>
-    <schema id="8" name="sys"/>
-    <schema id="9" name="things"/>
-    <schema id="10" name="world"/>
-    <table id="11" parent="1" name="company"/>
-    <table id="12" parent="1" name="user"/>
-    <column id="13" parent="11" name="idcompany">
-      <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
-      <sequence-identity>1</sequence-identity>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sakila"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="world"/>
+    <schema id="9" parent="1" name="blobsql"/>
+    <schema id="10" parent="1" name="peopledb"/>
+    <schema id="11" parent="1" name="things"/>
+    <table id="12" parent="2" name="company"/>
+    <table id="13" parent="2" name="user"/>
+    <column id="14" parent="12" name="idcompany">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="14" parent="11" name="namecompany">
-      <mandatory>1</mandatory>
-      <data-type>varchar(45)|0</data-type>
+    <column id="15" parent="12" name="namecompany">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="11" name="servicescompany">
-      <mandatory>1</mandatory>
-      <data-type>varchar(255)|0</data-type>
+    <column id="16" parent="12" name="servicescompany">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <key id="16" parent="11" name="PRIMARY">
-      <columns>idcompany</columns>
-      <primary>1</primary>
+    <key id="17" parent="12" name="PRIMARY">
+      <ColNames>idcompany</ColNames>
+      <Primary>1</Primary>
     </key>
-    <column id="17" parent="12" name="USER_ID">
-      <mandatory>1</mandatory>
-      <data-type>int(5)|0</data-type>
-      <sequence-identity>1</sequence-identity>
+    <column id="18" parent="13" name="USER_ID">
+      <Position>1</Position>
+      <DataType>int(5)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="18" parent="12" name="USERNAME">
-      <mandatory>1</mandatory>
-      <data-type>varchar(20)|0</data-type>
+    <column id="19" parent="13" name="USERNAME">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="19" parent="12" name="CREATED_BY">
-      <mandatory>1</mandatory>
-      <data-type>varchar(20)|0</data-type>
+    <column id="20" parent="13" name="CREATED_BY">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="12" name="CREATED_DATE">
-      <mandatory>1</mandatory>
-      <data-type>date|0</data-type>
+    <column id="21" parent="13" name="CREATED_DATE">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <key id="21" parent="12" name="PRIMARY">
-      <columns>USER_ID</columns>
-      <primary>1</primary>
+    <key id="22" parent="13" name="PRIMARY">
+      <ColNames>USER_ID</ColNames>
+      <Primary>1</Primary>
     </key>
   </database-model>
 </dataSource>

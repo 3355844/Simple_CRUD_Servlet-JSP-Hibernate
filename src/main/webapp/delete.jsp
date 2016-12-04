@@ -12,10 +12,12 @@
     <title>Delete</title>
 </head>
 <body>
-<form action="/update" method="get">
+<form action="/delete" method="post">
     <table>
-        <td><input type="text" name="createdByCheck"/></td>
-        <td><input type="submit" value="DELETE"/></td>
+        <tr>
+            <td><input type="text" name="check" value="${word}"/></td>
+            <td><input type="submit" value="DELETE"/></td>
+        </tr>
     </table>
 </form>
 </body>
