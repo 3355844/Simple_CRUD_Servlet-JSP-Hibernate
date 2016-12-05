@@ -11,7 +11,7 @@
     <title>index</title>
 </head>
 <body>
-<form method="post" action="/enter">
+<form method="post" action="/all">
     <table>
         <tr>
             <td>Name</td>
@@ -25,7 +25,6 @@
             <td>
                 <input type="reset" value="Reset"/>
                 <input type="submit" value="Login"/>
-
             </td>
         </tr>
 

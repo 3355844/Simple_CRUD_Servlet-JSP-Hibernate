@@ -18,22 +18,21 @@ import java.util.Date;
 //@WebServlet(name = "ServletUpdate")
 public class ServletUpdate extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession(true);
-        UserDao userDao = new UserDao();
-        User user = (User) session.getAttribute("user");
-
-        System.out.println(user.toString() + " do post void ");
-        user.setUserName(request.getParameter("userName"));
-        user.setCreatedBy(request.getParameter("createdBy"));
-        user.setCreatedDate(new Date());
-        userDao.update(user);
-        request.getRequestDispatcher("/all").forward(request, response);
+//        HttpSession session = request.getSession(true);
+//        UserDao userDao = new UserDao();
+//        User user = (User) session.getAttribute("user");
+//
+//        System.out.println(user.toString() + " do post void ");
+//        user.setUserName(request.getParameter("userNameUpdate"));
+//        user.setCreatedBy(request.getParameter("createdByUpdate"));
+//        user.setCreatedDate(new Date());
+//        userDao.update(user);
+//        request.getRequestDispatcher("/all").forward(request, response);
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
-        UserDao userDao = new UserDao();
         User user = (User) session.getAttribute("user");
         request.setAttribute("userName", user.getUserName());
         request.setAttribute("createdBy", user.getCreatedBy());

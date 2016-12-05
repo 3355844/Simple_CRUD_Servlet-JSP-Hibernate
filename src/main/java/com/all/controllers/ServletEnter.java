@@ -23,27 +23,27 @@ import java.util.List;
 public class ServletEnter extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String userName = request.getParameter("userName");
-        String createdBy = request.getParameter("createdBy");
-        UserDao userDao = new UserDao();
-        User user = userDao.findUserByNameAndCreator(userName, createdBy);
-        if (user != null) {
-            HttpSession session = request.getSession(true);
-            session.setAttribute("user", user);
-            request.getRequestDispatcher("/all").forward(request, response);
-        } else {
-            createNewUser(userName, createdBy, userDao);
-            request.getRequestDispatcher("/enter").forward(request, response);
-        }
-    }
-
-    private void createNewUser(String userName, String createdBy, UserDao userDao) {
-        User user;
-        user = new User();
-        user.setUserName(userName);
-        user.setCreatedBy(createdBy);
-        user.setCreatedDate(new Date());
-        userDao.addUserToDb(user);
+//        String userName = request.getParameter("userName");
+//        String createdBy = request.getParameter("createdBy");
+//        UserDao userDao = new UserDao();
+//        User user = userDao.findUserByNameAndCreator(userName, createdBy);
+//        if (user != null) {
+//            HttpSession session = request.getSession(true);
+//            session.setAttribute("user", user);
+//            request.getRequestDispatcher("/all").forward(request, response);
+//        } else {
+//            createNewUser(userName, createdBy, userDao);
+//            request.getRequestDispatcher("/enter").forward(request, response);
+//        }
+//    }
+//
+//    private void createNewUser(String userName, String createdBy, UserDao userDao) {
+//        User user;
+//        user = new User();
+//        user.setUserName(userName);
+//        user.setCreatedBy(createdBy);
+//        user.setCreatedDate(new Date());
+//        userDao.addUserToDb(user);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

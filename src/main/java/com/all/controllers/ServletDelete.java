@@ -17,16 +17,16 @@ import java.io.IOException;
 //@WebServlet(name = "ServletDelete")
 public class ServletDelete extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession(true);
-        UserDao userDao = new UserDao();
-        User user = (User) session.getAttribute("user");
-        String check = request.getParameter("check");
-        if (check.equalsIgnoreCase(user.getCreatedBy())) {
-            userDao.deleteUser(user);
-            request.getRequestDispatcher("/").forward(request,response);
-        } else {
-            request.getRequestDispatcher("/all").forward(request, response);
-        }
+//        HttpSession session = request.getSession(true);
+//        UserDao userDao = new UserDao();
+//        User user = (User) session.getAttribute("user");
+//        String check = request.getParameter("check");
+//        if (check.equalsIgnoreCase(user.getCreatedBy())) {
+//            userDao.deleteUser(user);
+//            request.getRequestDispatcher("/").forward(request,response);
+//        } else {
+//            request.getRequestDispatcher("/all").forward(request, response);
+//        }
 
     }
 

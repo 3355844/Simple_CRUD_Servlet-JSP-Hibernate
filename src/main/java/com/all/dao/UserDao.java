@@ -53,8 +53,9 @@ public class UserDao implements dao {
         List <User> list;
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        list = (List<User>) session.createQuery("from User").list();
+        list = (List<User>) session.createQuery("from User ").list();
         transaction.commit();
+        session.close();
         return list;
     }
 

@@ -18,10 +18,10 @@ import java.util.List;
 public class ServletAll extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("come to doPost void");
-        UserDao userDao = new UserDao();
-        List<User> userList = userDao.getAllUsers();
-        request.setAttribute("userList", userList);
-        request.getRequestDispatcher("all.jsp").forward(request, response);
+//        UserDao userDao = new UserDao();
+//        List<User> userList = userDao.getAllUsers();
+//        request.setAttribute("userList", userList);
+//        request.getRequestDispatcher("all.jsp").forward(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
