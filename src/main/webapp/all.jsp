@@ -40,11 +40,13 @@
             <c:forEach var="user" items="${userList}">
                 <tr>
                     <form action="/">
-                        <td width="10%"><input style="border:0px" type="text" name="userId" value="${user.getUserId()}" readonly /></td>
-                        <td width="30%"><input style="border:0px" type="text" name="userName" value="${user.getUserName()}"/></td>
-                        <td width="30%"><input style="border:0px" type="text" name="createdBy" value="${user.getCreatedBy()}"/></td>
-                        <td width="15">${user.getCreatedDate()}</td>
-                        <td><input style="border:0px" type="submit" name="methods" class="btn btn-success" value="UPDATE"/></td>
+                        <td><input style="border:0px" type="text" name="userId" value="${user.getUserId()}" readonly/>
+                        </td>
+                        <td><input style="border:0px" type="text" name="userName" value="${user.getUserName()}"/></td>
+                        <td><input style="border:0px" type="text" name="createdBy" value="${user.getCreatedBy()}"/></td>
+                        <td>${user.getCreatedDate()}</td>
+                        <td><input style="border:0px" type="submit" name="methods" class="btn btn-success"
+                                   value="UPDATE"/></td>
                     </form>
                     <td>
                         <a href="/?userId=${user.getUserId()}&methods=delete"
@@ -55,10 +57,10 @@
             </c:forEach>
             <tr>
                 <form method="POST" action="/">
-                    <td width="10%"></td>
-                    <td width="40%"><input type="text" name="userName" value="Name"/></td>
-                    <td width="40%"><input type="text" name="createdBy" value="Creator"/></td>
-                    <td width="10%"><input type="submit" class="btn btn-warning" value="CREATE"></td>
+                    <td></td>
+                    <td><input type="text" name="userName" value="Name"/></td>
+                    <td><input type="text" name="createdBy" value="Creator"/></td>
+                    <td><input type="submit" class="btn btn-warning" value="CREATE"></td>
                 </form>
             </tr>
         </table>
