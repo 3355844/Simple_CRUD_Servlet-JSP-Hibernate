@@ -43,7 +43,8 @@ public class Controller extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        getListUser(request, response);
+        List<User> userList = getUserDao().getAllUsers();
+        request.setAttribute("userList", userList);
         request.getRequestDispatcher(ALL).forward(request, response);
     }
 
@@ -60,10 +61,6 @@ public class Controller extends HttpServlet {
         doGet(request, response);
     }
 
-    private void getListUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<User> userList = getUserDao().getAllUsers();
-        request.setAttribute("userList", userList);
-    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
