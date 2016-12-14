@@ -35,21 +35,22 @@
                 <td>Id</td>
                 <td>Name</td>
                 <td>Create By</td>
+                <td>Date</td>
             </tr>
             <c:forEach var="user" items="${userList}">
                 <tr>
-                    <td>${user.getUserId()}</td>
-                    <td>${user.getCreatedDate()}</td>
-                    <td><a href="delete.jsp" class="btn btn-danger" value="${user.getUserId()}"> delete</a></td>
+                    <form action="/">
+                        <td><input type="text" name="userId" value="${user.getUserId()}" /></td>
+                        <td><input type="text" name="userName" value="${user.getUserName()}"/></td>
+                        <td><input type="text" name="createdBy" value="${user.getCreatedBy()}"/></td>
+                        <td>${user.getCreatedDate()}</td>
+                        <td><input type="submit" name="methods" value="UPDATE" class="btn btn-danger"/></td>
+                        <td><a href="/?method=DELETE&userId=${user.getUserId()}" class="btn btn-danger"> DELETE</a></td>
+                    </form>
                 </tr>
-                <td>Date</td>
-                <td>${user.getUserName()}</td>
-                <td>${user.getCreatedBy()}</td>
             </c:forEach>
         </table>
     </div>
-    <br><a href="/">To login page </a>
-    <br><a href="update.jsp">To updating your feeds </a>
 </div>
 </body>
 </html>
