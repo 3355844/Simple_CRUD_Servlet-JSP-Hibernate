@@ -4,47 +4,15 @@
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
 
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>/</welcome-file>
     </welcome-file-list>
     <servlet>
-        <servlet-name>MainController</servlet-name>
-        <servlet-class>com.all.controllers.MainController</servlet-class>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>com.all.controllers.Controller</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>MainController</servlet-name>
-        <url-pattern>/all</url-pattern>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
-    <!--<servlet>-->
-        <!--<servlet-name>ServletEnter</servlet-name>-->
-        <!--<servlet-class>com.all.controllers.ServletEnter</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>ServletEnter</servlet-name>-->
-        <!--<url-pattern>/enter</url-pattern>-->
-    <!--</servlet-mapping>-->
-    <!--<servlet>-->
-        <!--<servlet-name>ServletAll</servlet-name>-->
-        <!--<servlet-class>com.all.controllers.ServletAll</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>ServletAll</servlet-name>-->
-        <!--<url-pattern>/all</url-pattern>-->
-    <!--</servlet-mapping>-->
-    <!--<servlet>-->
-        <!--<servlet-name>ServletUpdate</servlet-name>-->
-        <!--<servlet-class>com.all.controllers.ServletUpdate</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>ServletUpdate</servlet-name>-->
-        <!--<url-pattern>/update</url-pattern>-->
-    <!--</servlet-mapping>-->
-    <!--<servlet>-->
-        <!--<servlet-name>ServletDelete</servlet-name>-->
-        <!--<servlet-class>com.all.controllers.ServletDelete</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>ServletDelete</servlet-name>-->
-        <!--<url-pattern>/delete</url-pattern>-->
-    <!--</servlet-mapping>-->
 </web-app>

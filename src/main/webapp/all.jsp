@@ -35,16 +35,16 @@
                 <td>Id</td>
                 <td>Name</td>
                 <td>Create By</td>
-                <td>Date</td>
             </tr>
             <c:forEach var="user" items="${userList}">
                 <tr>
                     <td>${user.getUserId()}</td>
-                    <td>${user.getUserName()}</td>
-                    <td>${user.getCreatedBy()}</td>
                     <td>${user.getCreatedDate()}</td>
                     <td><a href="delete.jsp" class="btn btn-danger" value="${user.getUserId()}"> delete</a></td>
                 </tr>
+                <td>Date</td>
+                <td>${user.getUserName()}</td>
+                <td>${user.getCreatedBy()}</td>
             </c:forEach>
         </table>
     </div>
